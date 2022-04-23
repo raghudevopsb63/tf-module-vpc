@@ -39,6 +39,7 @@ resource "aws_route_table" "private-route-table" {
   tags = {
     Name = "${var.ENV}-priv-route-table"
   }
+  depends_on = [aws_nat_gateway.ngw]
 }
 
 
